@@ -1,0 +1,8 @@
+FMO-Dashboard-Windows-Portable.zip  afaced1f4f125d4e6d5bcf30a28d5e87f69baa0860cd9fd23491ff1ff032395f
+FMO-Dashboard-Windows-Portable-v2.0.2.zip  afaced1f4f125d4e6d5bcf30a28d5e87f69baa0860cd9fd23491ff1ff032395f
+FMO-Dashboard-Windows-Portable-x64.zip  5d6d35a62614fffbb238f31f2299f367109eadbcaff4c9614d554028f9f83aa7
+FMO-Dashboard-Windows-Portable-x64-v2.0.2.zip  5d6d35a62614fffbb238f31f2299f367109eadbcaff4c9614d554028f9f83aa7
+FMO-Dashboard-Windows-Portable-x86.zip  f500c383e5296b4f39486499b6108f1e3d11642951856fa9cad514e5367c0157
+FMO-Dashboard-Windows-Portable-x86-v2.0.2.zip  f500c383e5296b4f39486499b6108f1e3d11642951856fa9cad514e5367c0157
+FMO-Dashboard-Windows-Legacy-Win7-x86.zip  c5a4eca94981bd114b87d56a216770d0d8b6e0429520831e524ac9f5418ce9c9
+FMO-Dashboard-Windows-Legacy-Win7-x86-v2.0.2.zip  c5a4eca94981bd114b87d56a216770d0d8b6e0429520831e524ac9f5418ce9c9

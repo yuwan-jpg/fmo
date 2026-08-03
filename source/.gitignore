@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Machine-specific / local config
+*.local
+android/local.properties
+
+# Secrets / credentials
+.env
+*.p12
+*.pfx
+*.pem
+*.key
+# Android keystore
+*.keystore
+
+# Android release build
+android/app/release/
+
+# Portable / release artifacts
+release/
