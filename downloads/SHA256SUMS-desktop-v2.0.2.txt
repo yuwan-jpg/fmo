@@ -1,0 +1,4 @@
+f8ce5809878a522863e1ab0baec0817a54e61527e2e6d696d60f9cc28b11ee3e  release/FMO-Dashboard-Windows-Desktop-x64-Setup.exe
+f8ce5809878a522863e1ab0baec0817a54e61527e2e6d696d60f9cc28b11ee3e  release/FMO-Dashboard-Windows-Desktop-x64-Setup-v2.0.2.exe
+9ba66e95ef91eeb37d0dc61f9efa2c0ca076f08452079963bdd2a00c71a97073  release/FMO-Dashboard-Windows-Desktop-x86-Setup.exe
+9ba66e95ef91eeb37d0dc61f9efa2c0ca076f08452079963bdd2a00c71a97073  release/FMO-Dashboard-Windows-Desktop-x86-Setup-v2.0.2.exe

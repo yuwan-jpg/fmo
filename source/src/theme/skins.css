@@ -1,0 +1,328 @@
+/* ============================================================
+ * 皮肤（Skin）与布局（Layout）
+ * 皮肤覆盖强调色等变量，浅/深明暗由 style.css 的 data-theme 承担；
+ * 布局控制 Dashboard 排布与信息密度。
+ * 通过 html[data-skin] / html[data-layout] 属性应用。
+ * ============================================================ */
+
+/* ---------- 皮肤：经典蓝（默认） ---------- */
+html[data-theme='light'][data-skin='blue'] {
+  --color-primary: #087fc4;
+  --color-primary-hover: #0569a2;
+  --color-success: #2f9d55;
+  --color-warning: #d46b08;
+  --color-danger: #f56c6c;
+  --color-danger-hover: #e64242;
+  --surface-accent: rgba(8, 127, 196, 0.1);
+  --surface-success: rgba(47, 157, 85, 0.12);
+  --surface-warning: rgba(185, 112, 8, 0.12);
+  --surface-danger: rgba(217, 77, 77, 0.12);
+  --bg-primary-light: #ecf5ff;
+  --bg-table-hover: #f0f4ff;
+  --shadow-primary: rgba(64, 158, 255, 0.2);
+  --shadow-primary-hover: rgba(64, 158, 255, 0.3);
+}
+html[data-theme='dark'][data-skin='blue'] {
+  --color-primary: #45b6ff;
+  --color-primary-hover: #73c9ff;
+  --color-success: #65d47e;
+  --color-warning: #ffb84d;
+  --color-danger: #ff7676;
+  --color-danger-hover: #f78989;
+  --surface-accent: rgba(69, 182, 255, 0.14);
+  --surface-success: rgba(101, 212, 126, 0.14);
+  --surface-warning: rgba(255, 191, 95, 0.13);
+  --surface-danger: rgba(255, 118, 118, 0.13);
+  --bg-primary-light: #1a2a3a;
+  --bg-table-hover: #202620;
+  --shadow-primary: rgba(69, 182, 255, 0.2);
+  --shadow-primary-hover: rgba(69, 182, 255, 0.3);
+}
+
+/* ---------- 皮肤：极光绿 ---------- */
+html[data-theme='light'][data-skin='aurora'] {
+  --color-primary: #0e9f6e;
+  --color-primary-hover: #0b7c55;
+  --color-success: #0e9f6e;
+  --color-warning: #b45309;
+  --color-danger: #e0533d;
+  --color-danger-hover: #c23b28;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 12%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  --bg-primary-light: color-mix(in srgb, var(--color-primary) 8%, #ffffff);
+  --bg-table-hover: color-mix(in srgb, var(--color-primary) 6%, #ffffff);
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+html[data-theme='dark'][data-skin='aurora'] {
+  --color-primary: #34d399;
+  --color-primary-hover: #6ee7b7;
+  --color-success: #6ee7a0;
+  --color-warning: #f59e0b;
+  --color-danger: #fb7185;
+  --color-danger-hover: #fda4af;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 14%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 14%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 13%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 13%, transparent);
+  --bg-primary-light: #14352a;
+  --bg-table-hover: #1c2b24;
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* ---------- 皮肤：暖阳橙 ---------- */
+html[data-theme='light'][data-skin='sunset'] {
+  --color-primary: #d97706;
+  --color-primary-hover: #b45309;
+  --color-success: #2f9d55;
+  --color-warning: #d97706;
+  --color-danger: #e0533d;
+  --color-danger-hover: #c23b28;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 11%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 12%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  --bg-primary-light: color-mix(in srgb, var(--color-primary) 8%, #ffffff);
+  --bg-table-hover: color-mix(in srgb, var(--color-primary) 6%, #ffffff);
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+html[data-theme='dark'][data-skin='sunset'] {
+  --color-primary: #fbbf24;
+  --color-primary-hover: #fcd34d;
+  --color-success: #6ee7a0;
+  --color-warning: #fbbf24;
+  --color-danger: #fb7185;
+  --color-danger-hover: #fda4af;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 14%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 13%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 13%, transparent);
+  --bg-primary-light: #3a2f16;
+  --bg-table-hover: #2b2419;
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* ---------- 皮肤：紫罗兰 ---------- */
+html[data-theme='light'][data-skin='violet'] {
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #e11d48;
+  --color-danger-hover: #be123c;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 11%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 12%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  --bg-primary-light: color-mix(in srgb, var(--color-primary) 8%, #ffffff);
+  --bg-table-hover: color-mix(in srgb, var(--color-primary) 6%, #ffffff);
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+html[data-theme='dark'][data-skin='violet'] {
+  --color-primary: #a78bfa;
+  --color-primary-hover: #c4b5fd;
+  --color-success: #6ee7a0;
+  --color-warning: #fbbf24;
+  --color-danger: #fb7185;
+  --color-danger-hover: #fda4af;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 14%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 13%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 13%, transparent);
+  --bg-primary-light: #2a2140;
+  --bg-table-hover: #241e2e;
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* ---------- 皮肤：玫瑰红 ---------- */
+html[data-theme='light'][data-skin='rose'] {
+  --color-primary: #e11d48;
+  --color-primary-hover: #be123c;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #e11d48;
+  --color-danger-hover: #be123c;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 12%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  --bg-primary-light: color-mix(in srgb, var(--color-primary) 8%, #ffffff);
+  --bg-table-hover: color-mix(in srgb, var(--color-primary) 6%, #ffffff);
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+html[data-theme='dark'][data-skin='rose'] {
+  --color-primary: #fb7185;
+  --color-primary-hover: #fda4af;
+  --color-success: #6ee7a0;
+  --color-warning: #fbbf24;
+  --color-danger: #fb7185;
+  --color-danger-hover: #fda4af;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 14%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 13%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 13%, transparent);
+  --bg-primary-light: #3a1524;
+  --bg-table-hover: #2c1d22;
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* ---------- 皮肤：海洋蓝 ---------- */
+html[data-theme='light'][data-skin='ocean'] {
+  --color-primary: #0d9488;
+  --color-primary-hover: #0f766e;
+  --color-success: #0e9f6e;
+  --color-warning: #b45309;
+  --color-danger: #e0533d;
+  --color-danger-hover: #c23b28;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 12%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 12%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  --bg-primary-light: color-mix(in srgb, var(--color-primary) 8%, #ffffff);
+  --bg-table-hover: color-mix(in srgb, var(--color-primary) 6%, #ffffff);
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+html[data-theme='dark'][data-skin='ocean'] {
+  --color-primary: #2dd4bf;
+  --color-primary-hover: #5eead4;
+  --color-success: #6ee7a0;
+  --color-warning: #fbbf24;
+  --color-danger: #fb7185;
+  --color-danger-hover: #fda4af;
+  --surface-accent: color-mix(in srgb, var(--color-primary) 14%, transparent);
+  --surface-success: color-mix(in srgb, var(--color-success) 14%, transparent);
+  --surface-warning: color-mix(in srgb, var(--color-warning) 13%, transparent);
+  --surface-danger: color-mix(in srgb, var(--color-danger) 13%, transparent);
+  --bg-primary-light: #14302c;
+  --bg-table-hover: #1c2a26;
+  --shadow-primary: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --shadow-primary-hover: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* 页面背景氛围光：跟随当前皮肤强调色与明暗模式 */
+html[data-theme='light'] body::before {
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      color-mix(in srgb, var(--color-primary) 8%, transparent),
+      transparent 28rem
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-success) 7%, transparent),
+      transparent 34rem
+    ),
+    var(--bg-page);
+}
+html[data-theme='dark'] body::before {
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      color-mix(in srgb, var(--color-primary) 13%, transparent),
+      transparent 28rem
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-success) 9%, transparent),
+      transparent 34rem
+    ),
+    var(--bg-page);
+}
+
+/* ============================================================
+ * 布局
+ * ============================================================ */
+
+/* ---------- 布局：极简 ---------- */
+/* 收起右侧栏（收藏中继/上个通联），当前呼叫与最近通联占满全宽 */
+html[data-layout='minimal'] .dashboard-side {
+  display: none;
+}
+html[data-layout='minimal'] .dashboard-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+/* 隐藏非关键命令按钮（主题/浮窗），保留录音、语音、语言、设置 */
+html[data-layout='minimal'] .dashboard-command-bar .command-tool-wide {
+  display: none;
+}
+
+/* ---------- 布局：驾驶舱 ---------- */
+/* 大字号、大按钮、高信息密度，适合值守 / 车载 */
+html[data-layout='cockpit'] .dashboard-command-bar {
+  padding: 0.9rem 1rem;
+}
+html[data-layout='cockpit'] .active-contact-card {
+  padding: 1.15rem 1.25rem;
+}
+html[data-layout='cockpit'] .active-contact-primary h1,
+html[data-layout='cockpit'] .active-contact-primary h2 {
+  font-size: clamp(3.8rem, 8vw, 6.6rem);
+}
+html[data-layout='cockpit'] .dashboard-actions a {
+  min-height: 3rem;
+  font-size: 1.02rem;
+}
+html[data-layout='cockpit'] .bearing-panel .compass {
+  width: 92px;
+  height: 92px;
+}
+html[data-layout='cockpit'] .bearing-meta strong {
+  font-size: 1.08rem;
+}
+html[data-layout='cockpit'] .live-table th,
+html[data-layout='cockpit'] .live-table td {
+  font-size: 1rem;
+}
+html[data-layout='cockpit'] .live-table {
+  padding: 0 0.6rem 0.35rem;
+}
+html[data-layout='cockpit'] .connection-copy strong {
+  font-size: 1.05rem;
+}
+
+/* ---------- 布局：大屏看板 ---------- */
+/* 沉浸式信息看板：隐藏操作元素与侧栏，当前呼叫与列表放大 */
+html[data-layout='immersive'] .dashboard-side {
+  display: none;
+}
+html[data-layout='immersive'] .dashboard-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+html[data-layout='immersive'] .dashboard-command-bar {
+  padding: 0.5rem 1rem;
+}
+html[data-layout='immersive'] .dashboard-command-bar .command-tool:not(.command-rec),
+html[data-layout='immersive'] .dashboard-command-bar .command-select-wrap,
+html[data-layout='immersive'] .dashboard-command-bar .public-tool-btn,
+html[data-layout='immersive'] .dashboard-command-bar .dashboard-brand .mobile-command-stats {
+  display: none;
+}
+html[data-layout='immersive'] .dashboard-command-bar .command-rec .command-rec-label {
+  display: none;
+}
+html[data-layout='immersive'] .active-contact-card {
+  padding: 1.25rem 1.5rem;
+}
+html[data-layout='immersive'] .active-contact-primary h1,
+html[data-layout='immersive'] .active-contact-primary h2 {
+  font-size: clamp(4rem, 9vw, 8rem);
+}
+html[data-layout='immersive'] .live-table th,
+html[data-layout='immersive'] .live-table td {
+  font-size: 1.05rem;
+  padding: 0.6rem 0.7rem;
+}
+html[data-layout='immersive'] .dashboard-actions a {
+  min-height: 3rem;
+  font-size: 1rem;
+}
